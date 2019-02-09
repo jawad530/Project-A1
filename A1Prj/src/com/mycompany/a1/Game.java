@@ -1,5 +1,7 @@
 package com.mycompany.a1;
 
-public class Game {
+import com.codename1.ui.Form;
+
+public class Game extends Form {
 
 }
