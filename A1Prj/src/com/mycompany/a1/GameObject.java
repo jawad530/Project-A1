@@ -3,13 +3,12 @@ import com.codename1.charts.util.ColorUtil;
 
 public abstract class GameObject {
 
-	// GameObject Variables
+	//GameObject Variables
 	private float xLocation;
 	private float yLocation;
 	private int color;
 	
-	//Getter and Setter Methods:
-	
+	//Setter Methods:
 	public void setXLoc(float x) 
 	{
 		
@@ -25,6 +24,8 @@ public abstract class GameObject {
 		this.color = color;
 	}
 	
+	
+	//Getter Methods:
 	public float getXLoc(float x) 
 	{
 		return xLocation;
