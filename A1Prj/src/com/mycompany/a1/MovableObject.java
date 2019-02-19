@@ -31,6 +31,12 @@ public abstract class MovableObject extends GameObject implements IMovable {
 		return objectDirection;
 	}
 	
+	//movableObject methods
+	public void move()
+	{
+		//Add code here
+	}
+	
 	//Custom toString Method
 	public String toString() {
 		return null; // CHANGE THIS SOON **************

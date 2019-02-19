@@ -11,12 +11,12 @@ public abstract class GameObject {
 	//Setter Methods:
 	public void setXLoc(double x) 
 	{
-		
+		this.xLocation = x;
 	}
 	
 	public void setYLoc(double y) 
 	{
-		
+		this.yLocation = y;
 	}
 	
 	public void setObjectColor(int color) 

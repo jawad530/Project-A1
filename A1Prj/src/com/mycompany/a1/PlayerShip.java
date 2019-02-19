@@ -18,6 +18,17 @@ public class PlayerShip extends MovableObject implements ISteerable {
 		this.setObjectColor(ColorUtil.BLUE);
 	}
 	
+	//methods
+	public void accelerationUpdate(int accelUpdate)
+	{
+		//ADD CODE HERE
+	}
+	
+	public void directionUpdate(int dirUpdate)
+	{
+		
+	}
+	
 	//Setters
 	public void setPlayerShipMissiles(int missiles)
 	{
@@ -28,6 +39,12 @@ public class PlayerShip extends MovableObject implements ISteerable {
 	public int getCurrentShipMissiles()
 	{
 		return this.maxMissileCount;
+	}
+	
+	//toString Method
+	public String toString()
+	{
+		return null; //WORK ON THIS LATER
 	}
 	
 }
