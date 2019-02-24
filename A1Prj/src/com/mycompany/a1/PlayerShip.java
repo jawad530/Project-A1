@@ -21,12 +21,28 @@ public class PlayerShip extends MovableObject implements ISteerable {
 	//methods
 	public void accelerationUpdate(int accelUpdate)
 	{
-		//ADD CODE HERE
+		int speed = this.getObjectSpeed();
+		int newSpeed = speed + accelUpdate;
+		this.setObjectSpeed(newSpeed);
+		//keep an eye on this method
 	}
 	
 	public void directionUpdate(int dirUpdate)
 	{
+		double direction = this.getObjectDirection();
+		//right turn
+		if (dirUpdate >= 0)
+		{
+			this.setObjectDirection((float)direction + 5);
+		}
+		// left turn
+		if (dirUpdate < 0)
+		{
+			this.setObjectDirection((float)direction - 5);
+		}
 		
+		//360 turn?
+		//monitor this method
 	}
 	
 	//Setters

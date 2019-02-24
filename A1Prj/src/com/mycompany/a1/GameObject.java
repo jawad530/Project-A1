@@ -26,12 +26,12 @@ public abstract class GameObject {
 	
 	
 	//Getter Methods:
-	public double getXLoc(double x) 
+	public double getXLoc() 
 	{
 		return xLocation;
 	}
 	
-	public double getYLoc(double y) 
+	public double getYLoc() 
 	{
 		return yLocation;
 	}

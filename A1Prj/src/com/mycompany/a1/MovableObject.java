@@ -34,7 +34,15 @@ public abstract class MovableObject extends GameObject implements IMovable {
 	//movableObject methods
 	public void move()
 	{
-		//Add code here
+		double PI = Math.PI;
+		double direction = this.getObjectDirection();
+		double angleCalculation = PI * (90 - direction / 180);
+		double currentXLocation = this.getXLoc();
+		double currentYLocation = this.getYLoc();
+		double deltaX = Math.cos(angleCalculation) * objectSpeed;
+		double deltaY = Math.sin(angleCalculation) * objectSpeed;
+		this.setXLoc(currentXLocation + deltaX);
+		this.setYLoc(currentYLocation + deltaY);
 	}
 	
 	//Custom toString Method
