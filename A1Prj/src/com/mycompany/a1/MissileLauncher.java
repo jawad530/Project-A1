@@ -1,5 +1,5 @@
 package com.mycompany.a1;
 
-public class MissileLauncher extends MovableObject {
+public abstract class MissileLauncher extends MovableObject implements ISteerable {
 
 }

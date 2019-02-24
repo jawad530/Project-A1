@@ -10,6 +10,7 @@ import com.codename1.ui.Form;
 public class Game extends Form {
 
 	private GameWorld gw;
+	private boolean quit = false;
 	
 	public Game(){
 		gw = new GameWorld();
@@ -31,7 +32,87 @@ public class Game extends Form {
 
 	                String sCommand = myTextField.getText().toString();
 	                myTextField.clear();
-	                switch (sCommand.charAt(0)) {
+	                if(quit) {
+	                	switch(sCommand.charAt(0)){
+	                	case 'a' : System.exit(0); break;
+	                	default: quit = false; break;
+	                	}
+	                }
+	                else {
+	                	switch(sCommand.charAt(0)) {
+	                	case 'a':
+	                	// gw.
+	                	break;
+	                	case 'b':
+	                	// gw.
+	                	break;
+	                	case 'c':
+		                // gw.
+		                break;
+	                	case 'd':
+			            // gw.
+			            break;
+	                	case 'e':
+			            // gw.
+			            break;
+	                	case 'E':
+			            // gw.
+			            break;
+	                	case 'f':
+			            // gw.
+			            break;
+	                	case 'h':
+			            // gw.
+			            break;
+	                	case 'i':
+			            // gw.
+			            break;
+	                	case 'I':
+			            // gw.
+			            break;
+	                	case 'j':
+	                    // gw.
+		                break;
+	                	case 'k':
+		                // gw.
+		                break;
+	                	case 'l':
+		                // gw.
+		                break;
+	                	case 'L':
+		                // gw.
+		                break;
+	                	case 'm':
+		                // gw.
+		                break;
+	                	case 'n':
+		                // gw.
+		                break;
+	                	case 'p':
+		                // gw.
+		                break;
+	                	case 'q':
+		                // gw.
+		                break;
+	                	case 'r':
+		                // gw.
+		                break;
+	                	case 's':
+		                // gw.
+		                break;
+	                	case 't':
+		                // gw.
+		                break;
+	                	case 'x':
+		                // gw.
+		                break;
+	                	case 'y':
+		                // gw.
+		                break;
+	                	case '>':
+		                // gw.
+		                break;
+	                	}
 	                   // case 'e':
 	                     //   gw.eliminate();
 	                       // break;
