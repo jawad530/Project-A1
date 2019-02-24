@@ -3,11 +3,17 @@ import com.codename1.charts.util.ColorUtil;
 
 public class PlayerShip extends MovableObject implements ISteerable {
 
+	private MissileLauncher launcher;
+	
 	// Missiles are a set ammount to begin with
 	private int maxMissileCount = 10;
 	
 	public PlayerShip(double xCord, double yCord)
 	{
+		
+		 launcher = new SteerableMissileLauncher(this);
+		 
+		
 		//Location of player Ship
 		this.setXLoc(xCord/2);
 		this.setYLoc(yCord/2);

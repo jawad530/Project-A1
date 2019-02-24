@@ -3,6 +3,15 @@ import java.util.Random;
 
 public abstract class MovableObject extends GameObject implements IMovable {
 
+	/*
+	 * public MovableObject(Point2D location, int color, int speed, int direction)
+	 * {
+	 * 		super(location, color);
+	 * 		...
+	 * }
+	 */
+	
+	
 	// Randomizer initialization 
 	private Random ran = new Random();
 	

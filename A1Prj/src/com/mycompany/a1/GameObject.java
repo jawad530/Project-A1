@@ -3,6 +3,13 @@ import com.codename1.charts.util.ColorUtil;
 
 public abstract class GameObject {
 
+	/*
+	 * public GameObject(Point2D location, int color)
+	 * {
+	 * 		//...
+	 * }
+	 */
+	
 	//GameObject Variables
 	private double xLocation;
 	private double yLocation;
