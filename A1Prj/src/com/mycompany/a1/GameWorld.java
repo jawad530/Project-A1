@@ -63,4 +63,56 @@ public class GameWorld {
 	// Commands to manipulate the Game
 	// work on ship accel then add it here
 	
+	//Commands for PlayerShip controls
+	
+	public void increaseAcceleration() 
+	{
+		if (playerShip instanceof PlayerShip)
+		{
+			playerShip.accelerationUpdate(1);
+		}
+		
+	}
+	
+	public void decreaseAcceleration()
+	{
+		if (playerShip instanceof PlayerShip)
+		{
+			playerShip.accelerationUpdate(-1);
+		}
+	}
+	
+	public void rightTurn()
+	{
+		if (playerShip instanceof PlayerShip)
+		{
+			playerShip.directionUpdate(1);
+		}
+	}
+	
+	public void leftTurn()
+	{
+		if (playerShip instanceof PlayerShip)
+		{
+			playerShip.directionUpdate(-1);
+		}
+	}
+	
+	public void jump()
+	{
+		if (playerShip instanceof PlayerShip)
+		{
+			playerShip.setXLoc(1024/2);
+			playerShip.setYLoc(768/2);
+		}
+	}
+	
+	public void newSupply()
+	{
+		if (playerShip instanceof PlayerShip)
+		{
+			playerShip.setPlayerShipMissiles(10);
+		}
+	}
+	
 }
