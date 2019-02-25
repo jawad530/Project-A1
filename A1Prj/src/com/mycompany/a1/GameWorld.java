@@ -24,6 +24,10 @@ public class GameWorld {
 	//Constructor for Ship controlled by the player
 	public void newPlayerShip()
 	{
+		if (playerShip instanceof PlayerShip)
+		{
+			return;
+		}
 		playerShip = new PlayerShip(Xcord, Ycord);
 	}
 	
@@ -428,7 +432,16 @@ public class GameWorld {
 	
 	public void print()
 	{
-		System.out.println("test");
+		System.out.println("Game Score: " + gameScore + " Missiles: " + playerShip.getCurrentShipMissiles() + " Time elapsed: " + gameTimer);
+	}
+	
+	public void Map()
+	{
+		int gameObjects = gameWorldObj.size();
+		for (int j = 0; j < gameObjects; j++) 
+		{
+			System.out.println(gameWorldObj.get(j));
+		}
 	}
 	
 	

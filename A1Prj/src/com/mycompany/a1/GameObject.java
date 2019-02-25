@@ -51,7 +51,13 @@ public abstract class GameObject {
 	//Custom String Method
 	public String toString() 
 	{
+		double xReturn = Math.round(xLocation*10.0) / 10.0;
+		double yReturn = Math.round(yLocation*10.0) / 10.0;
+		
+		return "Location: " + xReturn + "," + yReturn + "color = " + color;
+		//return null;
 		//FIX THIS LATER
-		return null; //TO FIX*****************
+		//return null; //TO FIX*****************
+		
 	}
 }

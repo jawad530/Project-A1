@@ -56,7 +56,10 @@ public abstract class MovableObject extends GameObject implements IMovable {
 	
 	//Custom toString Method
 	public String toString() {
-		return null; // CHANGE THIS SOON **************
+		//return null; // CHANGE THIS SOON **************
+	//	return super.toString() + 
+		double directionReturn = Math.round(objectDirection*10.0)/10;
+		return "Direction= " + directionReturn + " Speed= " + objectSpeed;
 	}
 	
 }

@@ -71,46 +71,46 @@ public class Game extends Form {
 			            gw.impacted();
 			            break;
 	                	case 'j':
-	                    // gw.
+	                    gw.jump();
 		                break;
 	                	case 'k':
-		                // gw.
+		                gw.KilledAsteroid();
 		                break;
 	                	case 'l':
-		                // gw.
+		                gw.leftTurn();
 		                break;
 	                	case 'L':
-		                // gw.
+		                //gw.Map();
 		                break;
 	                	case 'm':
-		                // gw.
+		                gw.Map();
 		                break;
 	                	case 'n':
-		                // gw.
+		                gw.newSupply();
 		                break;
 	                	case 'p':
-		                // gw.
+		                gw.print();
 		                break;
 	                	case 'q':
 		                // gw.
 		                break;
 	                	case 'r':
-		                // gw.
+		                gw.rightTurn();
 		                break;
 	                	case 's':
-		                // gw.
+		                gw.newPlayerShip();
 		                break;
 	                	case 't':
-		                // gw.
+		                gw.tick();
 		                break;
 	                	case 'x':
-		                // gw.
+		                gw.exterminate();
 		                break;
 	                	case 'y':
-		                // gw.
+		                gw.addNewNonPlayerShip();
 		                break;
 	                	case '>':
-		                // gw.
+		                //
 		                break;
 	                	}
 	                   // case 'e':
