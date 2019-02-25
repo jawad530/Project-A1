@@ -134,4 +134,245 @@ public class GameWorld {
 			System.out.println("Error: Was not able to fire");
 	}
 	
+	public void KilledAsteroid()
+	{
+		boolean asteroidExist = false;
+		boolean missileExist = false; 
+		int asteroidHolder = 0;
+		int missileHolder = 0;
+		int gameWorldScan = gameWorldObj.size();
+		
+		//check if there exists an asteroid and missile
+		for (int i =0; i < gameWorldScan; i++)
+		{
+			if (gameWorldObj.get(i) instanceof Asteroid)
+			{
+				asteroidExist = true;
+				asteroidHolder = i;
+			}
+			if (gameWorldObj.get(i) instanceof Missile)
+			{
+				missileExist = true;
+				missileHolder = i;
+			}
+		}
+		if (asteroidExist = true && missileExist == true)
+		{
+			gameScore = gameScore + 100;
+			gameWorldObj.remove(asteroidHolder);
+			gameWorldObj.remove(missileHolder);
+		}
+		else
+				System.out.println("Unable to use method Kill");
+	}
+	
+	public void crashed()
+	{
+		boolean asteroidExist = false;
+		boolean shipExist = false; 
+		int asteroidHolder = 0;
+		int shipHolder = 0;
+		int gameWorldScan = gameWorldObj.size();
+		
+		//check if there exists an asteroid and missile
+		for (int i =0; i < gameWorldScan; i++)
+		{
+			if (gameWorldObj.get(i) instanceof Asteroid)
+			{
+				asteroidExist = true;
+				asteroidHolder = i;
+			}
+			if (gameWorldObj.get(i) instanceof PlayerShip)
+			{
+				shipExist = true;
+				shipHolder = i;
+			}
+		}
+		if (asteroidExist = true && shipExist == true)
+		{
+			gameWorldObj.remove(asteroidHolder);
+			gameWorldObj.remove(shipHolder);
+			playerShip = null;
+			lives = lives -1;
+			if (lives < 1)
+			{
+				System.out.println("Game Over");
+			}
+		}
+		else
+				System.out.println("Unable to use method Crashed");
+	}
+	
+	public void exterminate()
+	{
+		boolean asteroid1Exist = false;
+		boolean asteroid2Exist = false; 
+		int asteroid1Holder = 0;
+		int asteroid2Holder = 0;
+		int gameWorldScan = gameWorldObj.size();
+		
+		//check if there exists an asteroid and missile
+		for (int i =0; i < gameWorldScan; i++)
+		{
+			if (gameWorldObj.get(i) instanceof Asteroid)
+			{
+				asteroid1Exist = true;
+				asteroid1Holder = i;
+			}
+			i++;
+			if (gameWorldObj.get(i) instanceof Asteroid)
+			{
+				asteroid2Exist = true;
+				asteroid2Holder = i;
+			}
+		}
+		if (asteroid1Exist = true && asteroid2Exist == true)
+		{
+			
+			gameWorldObj.remove(asteroid1Holder);
+			gameWorldObj.remove(asteroid2Holder);
+		}
+		else
+				System.out.println("Unable to use method exterminate");
+	}
+	
+	public void eliminated()
+	{
+		boolean npsExist = false;
+		boolean missileExist = false; 
+		int npsHolder = 0;
+		int missileHolder = 0;
+		int gameWorldScan = gameWorldObj.size();
+		
+		//check if there exists an asteroid and missile
+		for (int i =0; i < gameWorldScan; i++)
+		{
+			if (gameWorldObj.get(i) instanceof NonPlayerShip)
+			{
+				npsExist = true;
+				npsHolder = i;
+			}
+			if (gameWorldObj.get(i) instanceof Missile)
+			{
+				missileExist = true;
+				missileHolder = i;
+			}
+		}
+		if (npsExist = true && missileExist == true)
+		{
+			gameScore = gameScore + 200;
+			gameWorldObj.remove(npsHolder);
+			gameWorldObj.remove(missileHolder);
+		}
+		else
+				System.out.println("Unable to use method Eliminate");
+	}
+	
+	public void exploded()
+	{
+		boolean missileExist = false;
+		boolean shipExist = false; 
+		int missileHolder = 0;
+		int shipHolder = 0;
+		int gameWorldScan = gameWorldObj.size();
+		
+		//check if there exists an asteroid and missile
+		for (int i =0; i < gameWorldScan; i++)
+		{
+			if (gameWorldObj.get(i) instanceof Missile)
+			{
+				missileExist = true;
+				missileHolder = i;
+			}
+			if (gameWorldObj.get(i) instanceof PlayerShip)
+			{
+				shipExist = true;
+				shipHolder = i;
+			}
+		}
+		if (missileExist = true && shipExist == true)
+		{
+			gameWorldObj.remove(missileHolder);
+			gameWorldObj.remove(shipHolder);
+			playerShip = null;
+			lives = lives -1;
+			if (lives < 1)
+			{
+				System.out.println("Game Over");
+			}
+		}
+		else
+				System.out.println("Unable to use method exploded");
+	}
+	
+	public void hit()
+	{
+		boolean npsExist = false;
+		boolean shipExist = false; 
+		int npsHolder = 0;
+		int shipHolder = 0;
+		int gameWorldScan = gameWorldObj.size();
+		
+		//check if there exists an asteroid and missile
+		for (int i =0; i < gameWorldScan; i++)
+		{
+			if (gameWorldObj.get(i) instanceof NonPlayerShip)
+			{
+				npsExist = true;
+				npsHolder = i;
+			}
+			if (gameWorldObj.get(i) instanceof PlayerShip)
+			{
+				shipExist = true;
+				shipHolder = i;
+			}
+		}
+		if (npsExist = true && shipExist == true)
+		{
+			gameWorldObj.remove(npsHolder);
+			gameWorldObj.remove(shipHolder);
+			playerShip = null;
+			lives = lives -1;
+			if (lives < 1)
+			{
+				System.out.println("Game Over");
+			}
+		}
+		else
+				System.out.println("Unable to use method hit");
+	}
+	
+	public void impacted()
+	{
+		boolean asteroidExist = false;
+		boolean npsExist = false; 
+		int asteroidHolder = 0;
+		int npsHolder = 0;
+		int gameWorldScan = gameWorldObj.size();
+		
+		//check if there exists an asteroid and missile
+		for (int i =0; i < gameWorldScan; i++)
+		{
+			if (gameWorldObj.get(i) instanceof Asteroid)
+			{
+				asteroidExist = true;
+				asteroidHolder = i;
+			}
+			if (gameWorldObj.get(i) instanceof NonPlayerShip)
+			{
+				npsExist = true;
+				npsHolder = i;
+			}
+		}
+		if (asteroidExist = true && npsExist == true)
+		{
+			gameWorldObj.remove(asteroidHolder);
+			gameWorldObj.remove(npsHolder);
+			playerShip = null;
+			
+		}
+		else
+				System.out.println("Unable to use method impacted");
+	}
+	
 }

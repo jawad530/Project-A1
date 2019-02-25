@@ -21,13 +21,22 @@ public class SpaceStation extends FixedObject{
 	
 	//setters
 	
+	public void blink(boolean on)
+	{
+		this.blink = on;
+	}
+	
+	public boolean turnBlinkOn()
+	{
+		return blink;
+	}
+	
+	//setters
 	public void setBlinkRate(int blinkRate)
 	{
 		this.blinkRate = blinkRate;
 	}
-	
-	//BLINK NEEDS 2 METHODS
-	
+		
 	//getters
 	public int getBlinkRate()
 	{
@@ -37,7 +46,7 @@ public class SpaceStation extends FixedObject{
 	//toString
 	public String toString()
 	{
-		return null; //ADD CODE LATER
+		return "Space Station: " + super.toString() + "Blink Rate" + blinkRate;
 	}
 	
 }
