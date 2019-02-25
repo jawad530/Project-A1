@@ -47,28 +47,28 @@ public class Game extends Form {
 	                	gw.addNewStation();
 	                	break;
 	                	case 'c':
-		                // gw.
+		                gw.crashed();
 		                break;
 	                	case 'd':
 			            gw.decreaseAcceleration();
 			            break;
 	                	case 'e':
-			            // gw.
+			            gw.eliminated();
 			            break;
 	                	case 'E':
-			            // gw.
+			            gw.exploded();
 			            break;
 	                	case 'f':
-			            // gw.
+			            gw.fireMissile();
 			            break;
 	                	case 'h':
-			            // gw.
+			            gw.hit();
 			            break;
 	                	case 'i':
-			            // gw.
+			            gw.increaseAcceleration();
 			            break;
 	                	case 'I':
-			            // gw.
+			            gw.impacted();
 			            break;
 	                	case 'j':
 	                    // gw.

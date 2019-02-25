@@ -34,8 +34,9 @@ public abstract class FixedObject extends GameObject {
 	}
 	
 	//Custom toString
-	public String toString() {
-		return null; // Change later ************
+	public String toString()
+	{
+		return super.toString() + ", ID=" + identifier;
 	}
 	
 }

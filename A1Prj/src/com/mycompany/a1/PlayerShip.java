@@ -66,7 +66,7 @@ public class PlayerShip extends MovableObject implements ISteerable {
 	//toString Method
 	public String toString()
 	{
-		return null; //WORK ON THIS LATER
+		return "PlayerShip: " + super.toString() + " Missiles" + maxMissileCount;
 	}
 	
 }

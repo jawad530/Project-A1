@@ -13,7 +13,7 @@ public class NonPlayerShip extends MovableObject{
 	// Missiles are a set amount to begin with
 	private int maxMissileCount = 10;
 	
-	public NonPlayerShip(double xCord, double yCord)
+	public NonPlayerShip()
 	{
 		
 		 launcher = new FixedMissileLauncher(this);
@@ -54,7 +54,7 @@ public class NonPlayerShip extends MovableObject{
 	//toString Method
 	public String toString()
 	{
-		return null; //WORK ON THIS LATER
+		return "NonPlayerShip: " + super.toString() + " Missiles" + maxMissileCount;
 	}
 
 }

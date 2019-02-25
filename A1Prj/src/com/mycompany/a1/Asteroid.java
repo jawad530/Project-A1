@@ -33,5 +33,10 @@ public class Asteroid extends MovableObject{
 		//Color of PlayerShip
 		this.setObjectColor(ColorUtil.GREEN);
 	}
+
+	public String toString()
+	{
+		return super.toString() + ", size=" + size;
+	}
 	
 }

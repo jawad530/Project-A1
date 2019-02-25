@@ -32,7 +32,7 @@ public class Missile extends MovableObject {
 	//toString Change later
 	public String toString()
 	{
-		return null;
+		return super.toString() + " fuel=" + missileFuel;
 	}
 	
 }

@@ -1,10 +1,16 @@
 package com.mycompany.a1;
 import java.util.ArrayList;
+import java.util.Random;
+import com.codename1.charts.util.ColorUtil;
+
 
 public class GameWorld {
 	
 	private final static double Xcord = 1024;
 	private final static double Ycord = 768;
+	
+	//for spacecstation tick
+	private Random ran = new Random();
 	
 	// Initializing GameWorld
 	private int gameScore = 0;
@@ -56,6 +62,11 @@ public class GameWorld {
 	public void addNewAsteroid()
 	{
 		gameWorldObj.add(new Asteroid());
+	}
+	
+	public void addNewNonPlayerShip()
+	{
+		gameWorldObj.add(new NonPlayerShip());
 	}
 	
 	// add here the one for misse launcher?
@@ -374,5 +385,51 @@ public class GameWorld {
 		else
 				System.out.println("Unable to use method impacted");
 	}
+	
+	public void tick()
+	{
+		int gameWorldArray = gameWorldObj.size();
+		
+		for(int k = gameWorldArray -1; k >=0; k--)
+		{
+			if(gameWorldObj.get(k) instanceof IMovable)
+			{
+				IMovable updatePositions = (IMovable)gameWorldObj.get(k);
+				updatePositions.move();
+			}
+			
+			if(gameWorldObj.get(k) instanceof Missile)
+			{
+				Missile decrementFuel = (Missile)gameWorldObj.get(k);
+				int fuel = decrementFuel.getMissileFuel();
+				decrementFuel.setMissileFuel(fuel - 1);
+				if (fuel < 1)
+					gameWorldObj.remove(k);
+			}
+			if(gameWorldObj.get(k) instanceof SpaceStation)
+			{
+				SpaceStation station = (SpaceStation)gameWorldObj.get(k);
+				if((gameTimer + 1) % station.getBlinkRate() != 0)
+				{
+					if(station.turnBlinkOn())
+					{
+						station.blink(false);
+					}
+					else
+					{
+						station.blink(true);
+					}
+				}
+			}
+			else
+				System.out.println("Error, Cant use tick");
+		}
+	}
+	
+	public void print()
+	{
+		System.out.println("test");
+	}
+	
 	
 }
