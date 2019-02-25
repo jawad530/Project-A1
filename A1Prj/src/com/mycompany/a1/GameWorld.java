@@ -115,4 +115,23 @@ public class GameWorld {
 		}
 	}
 	
+	//problem is need to edit missile launcher to be the one firing the missile
+	public void fireMissile()
+	{
+		if (playerShip instanceof PlayerShip)
+		{
+			int maxMissileCount = playerShip.getCurrentShipMissiles();
+			
+			if (maxMissileCount > 0)
+			{
+				gameWorldObj.add(new Missile( playerShip.getXLoc(), playerShip.getYLoc(), playerShip.getObjectDirection() ));
+				playerShip.setPlayerShipMissiles(maxMissileCount--);
+			}
+			else 
+				System.out.println("No more Missiles!");
+		}
+		else 
+			System.out.println("Error: Was not able to fire");
+	}
+	
 }

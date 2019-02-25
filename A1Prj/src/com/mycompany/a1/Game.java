@@ -41,16 +41,16 @@ public class Game extends Form {
 	                else {
 	                	switch(sCommand.charAt(0)) {
 	                	case 'a':
-	                	// gw.
+	                	gw.addNewAsteroid();
 	                	break;
 	                	case 'b':
-	                	// gw.
+	                	gw.addNewStation();
 	                	break;
 	                	case 'c':
 		                // gw.
 		                break;
 	                	case 'd':
-			            // gw.
+			            gw.decreaseAcceleration();
 			            break;
 	                	case 'e':
 			            // gw.

@@ -38,10 +38,12 @@ public abstract class MissileLauncher extends MovableObject
 	  		
 	  }
 	  
-	//  public Missile fireMissile()
-	 // {
-	 // 		return new Missile();
-	  //}
+	  public Missile fireMissile()
+	  {
+		  	
+		  	return null;
+	 		//return new Missile();
+	  }
 	  
 	 
 }

@@ -1,11 +1,16 @@
 package com.mycompany.a1;
 import com.codename1.charts.util.ColorUtil;
+import java.util.Random;
+import com.codename1.charts.util.ColorUtil;
 
 public class NonPlayerShip extends MovableObject{
 	
-private MissileLauncher launcher;
+	private MissileLauncher launcher;
 	
-	// Missiles are a set ammount to begin with
+	//initial location and direction for nonPlayerShip is random
+	private Random ran = new Random();
+	
+	// Missiles are a set amount to begin with
 	private int maxMissileCount = 10;
 	
 	public NonPlayerShip(double xCord, double yCord)
@@ -15,10 +20,10 @@ private MissileLauncher launcher;
 		 
 		
 		//Location of player Ship
-		this.setXLoc(xCord/2);
-		this.setYLoc(yCord/2);
+		this.setXLoc(ran.nextInt(1024));
+		this.setYLoc(ran.nextInt(768));
 		//speed and its initial direction
-		this.setObjectDirection(0); // random
+		this.setObjectDirection(ran.nextInt()); // random
 		this.setObjectSpeed(0);
 		//Color of PlayerShip
 		this.setObjectColor(ColorUtil.BLUE);
