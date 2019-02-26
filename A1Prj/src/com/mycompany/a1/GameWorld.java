@@ -17,6 +17,8 @@ public class GameWorld {
 	private int lives = 3;
 	private int gameTimer = 0;
 	
+	
+	
 	//Hold GameWorld in an ArrayList
 	private ArrayList<GameObject> gameWorldObj = new ArrayList<GameObject>();
 	private PlayerShip playerShip;
@@ -31,10 +33,14 @@ public class GameWorld {
 		playerShip = new PlayerShip(Xcord, Ycord);
 	}
 	
+	
+	
 	public void init() {
 		newPlayerShip();
 		gameWorldObj.add(playerShip);
 	}
+	
+	
 	
 	//Setters
 	public void setGameScore(int gameScore)
@@ -171,7 +177,7 @@ public class GameWorld {
 				missileHolder = i;
 			}
 		}
-		if (asteroidExist = true && missileExist == true)
+		if (asteroidExist == true && missileExist == true)
 		{
 			gameScore = gameScore + 100;
 			gameWorldObj.remove(asteroidHolder);
@@ -203,7 +209,7 @@ public class GameWorld {
 				shipHolder = i;
 			}
 		}
-		if (asteroidExist = true && shipExist == true)
+		if (asteroidExist == true && shipExist == true)
 		{
 			gameWorldObj.remove(asteroidHolder);
 			gameWorldObj.remove(shipHolder);
@@ -241,7 +247,7 @@ public class GameWorld {
 				asteroid2Holder = i;
 			}
 		}
-		if (asteroid1Exist = true && asteroid2Exist == true)
+		if (asteroid1Exist == true && asteroid2Exist == true)
 		{
 			
 			gameWorldObj.remove(asteroid1Holder);
@@ -273,7 +279,7 @@ public class GameWorld {
 				missileHolder = i;
 			}
 		}
-		if (npsExist = true && missileExist == true)
+		if (npsExist == true && missileExist == true)
 		{
 			gameScore = gameScore + 200;
 			gameWorldObj.remove(npsHolder);
@@ -305,7 +311,7 @@ public class GameWorld {
 				shipHolder = i;
 			}
 		}
-		if (missileExist = true && shipExist == true)
+		if (missileExist == true && shipExist == true)
 		{
 			gameWorldObj.remove(missileHolder);
 			gameWorldObj.remove(shipHolder);
@@ -342,7 +348,7 @@ public class GameWorld {
 				shipHolder = i;
 			}
 		}
-		if (npsExist = true && shipExist == true)
+		if (npsExist == true && shipExist == true)
 		{
 			gameWorldObj.remove(npsHolder);
 			gameWorldObj.remove(shipHolder);
@@ -379,7 +385,7 @@ public class GameWorld {
 				npsHolder = i;
 			}
 		}
-		if (asteroidExist = true && npsExist == true)
+		if (asteroidExist == true && npsExist == true)
 		{
 			gameWorldObj.remove(asteroidHolder);
 			gameWorldObj.remove(npsHolder);

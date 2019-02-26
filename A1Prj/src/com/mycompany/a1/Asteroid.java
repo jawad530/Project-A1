@@ -36,7 +36,7 @@ public class Asteroid extends MovableObject{
 
 	public String toString()
 	{
-		return super.toString() + ", size=" + size;
+		return "Asteroid: " + super.toString() + ", size=" + size;
 	}
 	
 }

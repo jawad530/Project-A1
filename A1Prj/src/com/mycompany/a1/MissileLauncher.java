@@ -31,8 +31,8 @@ public abstract class MissileLauncher extends MovableObject
 	  {
 	  		super();
 	  		this.nps = nps;
-	  		double xLocation = ship.getXLoc();
-	  		double yLocation = ship.getYLoc();
+	  		double xLocation = nps.getXLoc();
+	  		double yLocation = nps.getYLoc();
 	  		this.setXLoc(xLocation);
 	  		this.setYLoc(yLocation);
 	  		

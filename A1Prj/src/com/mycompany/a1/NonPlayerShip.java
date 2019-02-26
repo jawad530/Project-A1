@@ -54,7 +54,7 @@ public class NonPlayerShip extends MovableObject{
 	//toString Method
 	public String toString()
 	{
-		return "NonPlayerShip: " + super.toString() + " Missiles" + maxMissileCount;
+		return "NonPlayerShip: " + super.toString() + " Missiles " + maxMissileCount;
 	}
 
 }

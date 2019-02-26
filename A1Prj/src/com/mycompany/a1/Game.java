@@ -6,11 +6,15 @@ import com.codename1.ui.events.ActionEvent;
 import java.lang.String;
 import com.codename1.ui.Form;
 
-
 public class Game extends Form {
 
 	private GameWorld gw;
 	private boolean quit = false;
+	
+	public void qConfirm()
+	{
+		System.out.println( "Are you sure you want to quit? press Y to confirm");
+	}
 	
 	public Game(){
 		gw = new GameWorld();
@@ -34,7 +38,7 @@ public class Game extends Form {
 	                myTextField.clear();
 	                if(quit) {
 	                	switch(sCommand.charAt(0)){
-	                	case 'a' : System.exit(0); break;
+	                	case 'Y' : System.exit(0); break;
 	                	default: quit = false; break;
 	                	}
 	                }
@@ -92,7 +96,8 @@ public class Game extends Form {
 		                gw.print();
 		                break;
 	                	case 'q':
-		                // gw.
+		                quit = true;
+		                qConfirm();
 		                break;
 	                	case 'r':
 		                gw.rightTurn();
@@ -110,8 +115,11 @@ public class Game extends Form {
 		                gw.addNewNonPlayerShip();
 		                break;
 	                	case '>':
+	                	
 		                //
 		                break;
+		                default:
+		                System.out.println("Sorry that is an invalid input");
 	                	}
 	                   // case 'e':
 	                     //   gw.eliminate();

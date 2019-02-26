@@ -59,7 +59,7 @@ public abstract class MovableObject extends GameObject implements IMovable {
 		//return null; // CHANGE THIS SOON **************
 	//	return super.toString() + 
 		double directionReturn = Math.round(objectDirection*10.0)/10;
-		return "Direction= " + directionReturn + " Speed= " + objectSpeed;
+		return super.toString() + " Direction= " + directionReturn + " Speed= " + objectSpeed;
 	}
 	
 }
